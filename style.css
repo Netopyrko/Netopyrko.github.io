@@ -75,6 +75,18 @@ body {
 
 }
 
+/* A11y: odkazy v menu mají stejnou barvu i po navštívení */
+.topnav a,
+.topnav a:visited {
+  color: #fff;
+}
+
+/* A11y: viditelný focus pro ovládání klávesnicí */
+.topnav a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
 /* Responzivita – aby se sloupce skládaly pod sebe na menších displejích */
 @media (max-width: 900px) {
   .levysloupec, .pravysloupec {
@@ -82,3 +94,4 @@ body {
     float: none;
   }
 }
+
