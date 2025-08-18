@@ -15,11 +15,8 @@ body {
     color: #0E858B;
 }
 .header h1 {
-    background: linear-gradient(to right, #0E858B, #18F0FA);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: #083f3f;
-    font-size: 50px;
+  color: #083f3f;
+  font-size: 50px;
 }
 
 /* Pokud prohlížeč umí textový gradient, použij ho */
@@ -104,5 +101,6 @@ body {
     float: none;
   }
 }
+
 
 
