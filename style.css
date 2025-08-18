@@ -18,8 +18,18 @@ body {
     background: linear-gradient(to right, #0E858B, #18F0FA);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: #083f3f;
     font-size: 50px;
+}
+
+/* Pokud prohlížeč umí textový gradient, použij ho */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .header h1 {
+    background: linear-gradient(to right, #0E858B, #18F0FA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* schová fallback barvu u podporovaných prohlížečů */
+  }
 }
 
 /* Navigace */
@@ -94,4 +104,5 @@ body {
     float: none;
   }
 }
+
 
