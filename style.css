@@ -94,6 +94,27 @@ body {
   outline-offset: 2px;
 }
 
+/* Menu: bílý text ve všech stavech + tmavší hover pozadí */
+.topnav a,
+.topnav a:visited,
+.topnav a:hover,
+.topnav a:focus,
+.topnav a:active {
+  color: #fff;
+}
+
+.topnav a:hover { background-color: #0c6f74; } /* ztmavení pro kontrast */
+
+.topnav a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.popisek {
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
 /* Responzivita – aby se sloupce skládaly pod sebe na menších displejích */
 @media (max-width: 900px) {
   .levysloupec, .pravysloupec {
