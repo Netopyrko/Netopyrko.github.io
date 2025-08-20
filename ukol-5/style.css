@@ -1,32 +1,12 @@
-body {
-    margin: 0;
-    background-color: #ddd;
-    font-family: sans-serif;
-  }
-
-  .fake-table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    padding: 2rem;
-    gap: 1rem;
-  }
-
-  .cell {
-    border: 1px solid black;
-    padding: 1rem;
-    flex: 1 1 240px;
-    min-width: 220px;
-    text-align: center;
-  }
-
-.arrow{ cursor: pointer; }
-.arrow polygon{
-  fill: limegreen;
-  transition: fill .3s;
+/* Jen specifika SVG stránky pod scope .page-ukol-5 */
+.page-ukol-5 .fake-table{
+  display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start;
 }
-.arrow:hover polygon,
-.arrow:focus-visible polygon{
-  fill: blue;
+.page-ukol-5 .cell{
+  border:1px solid #000; padding:1rem; flex:1 1 220px;
+  text-align:center; background:#fff;
 }
+
+/* Šipka – hover barvy */
+.page-ukol-5 .arrow polygon{ fill:limegreen; transition:fill .3s; }
+.page-ukol-5 .arrow:hover polygon{ fill:blue; }

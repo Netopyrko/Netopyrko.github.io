@@ -1,39 +1,18 @@
-body {
-    font-family: sans-serif;
-    background-color: #fff;
-    margin: 20px;
-  }
-  
-  .gallery {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  
-  .image-container {
-    position: relative;
-    width: 250px;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    width: 100%;
-    display: block;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: black;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    opacity: 0.3;
-    transition: opacity 0.5s ease;
-  }
-  
-  .image-container:hover .caption {
-    opacity: 1;
-  }
+/* Celé stylování galerie „pod“ scope třídu, ať se nemíchá s globálem */
+.page-ukol-4 .gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+  gap:12px;
+}
+.page-ukol-4 .image-container{
+  background:#eef2f2;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 1px 2px rgba(0,0,0,.06);
+}
+.page-ukol-4 .image-container img{
+  width:100%; height:200px; object-fit:cover; display:block;
+  transition:transform .25s ease;
+}
+.page-ukol-4 .image-container:hover img{ transform:scale(1.04); }
+.page-ukol-4 .caption{ padding:8px 10px; font-weight:600; }

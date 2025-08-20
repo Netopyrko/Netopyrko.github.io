@@ -27,3 +27,20 @@ tr:nth-child(1) td:nth-child(n+3)::after {
 td{
     padding: 7px;
 }
+/* ⚠️ Vyhoď původní body{…} a nahraď jen scoped pravidly */
+.page-ukol-3 table{
+  width:100%;
+  border-collapse:collapse;
+  counter-reset:kolo;
+}
+.page-ukol-3 tr:nth-child(2n){ background-color:rgb(204,204,255); }
+.page-ukol-3 tr:first-child{ font-weight:bold; }
+.page-ukol-3 tr:hover:not(:first-child){
+  background-color:rgb(96,96,255);
+  color:#fff; cursor:pointer;
+}
+.page-ukol-3 tr:first-child td:nth-child(n+3)::after{
+  counter-increment:kolo;
+  content:"Kolo: " counter(kolo);
+}
+.page-ukol-3 td{ padding:7px; }
