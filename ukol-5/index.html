@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ukol5</title>
+    <meta name="description" content="Stručný popis této stránky.">
+
+    <!-- zrychlení fontů (musí být NAD Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- stejný font jako na hlavní stránce -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
     <h1>Cvičení SVG(+CSS?)</h1>
+    <p class="sub">Krátký podtitulek / popis</p>
+  </header>
+
+  <main class="wrap">
     <div class="fake-table">
         <!-- Domek -->
         <div class="cell">
@@ -58,5 +73,10 @@
           </svg>
         </div>
       </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Pohyb v kódu · <a href="/">← Zpět na hlavní stránku</a></p>
+  </footer>
 </body>
 </html>
