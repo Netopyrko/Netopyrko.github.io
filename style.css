@@ -32,7 +32,7 @@ body {
 /* Navigace */
 .topnav {
     overflow: hidden;
-    background-color: #0E858B;
+    background-color: #0c6f74;
 }
 .topnav a {
     display: block;
@@ -43,8 +43,8 @@ body {
     text-align: center;
 }
 .topnav a:hover {
-    background-color: white;
-    color: #0E858B;
+    background-color: #095e62;
+    color: #fff;
     cursor: pointer;
 }
 /*Hlavní část (main) */
