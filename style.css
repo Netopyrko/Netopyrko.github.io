@@ -149,6 +149,48 @@ body {
   margin: .5rem 0;
 }
 
+/* podtitulek v hlavičce */
+.sub { margin-top: 6px; color: #094c4c; opacity: .9; }
+
+/* projekty – „pilulky“ */
+.projects { display: flex; flex-wrap: wrap; gap: 8px; margin-top: .5rem; }
+.pill{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #0E858B;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.pill:hover{ background:#0c6f74; color:#fff; }
+
+/* seznamy a poznámky */
+.list-clean{ list-style: none; margin: .5rem 0 0; padding-left: 0; }
+.list-clean li{ margin: .25rem 0; }
+.list-steps{ padding-left: 1.2rem; }
+.note{ font-size: .95rem; color:#333; }
+
+/* zvýraznění popisku (pokud jsi nahrazoval h5 -> p.popisek) */
+.popisek { font-weight: 600; margin: .5rem 0; }
+
+/* obrázek v sidebaru */
+.fakeimg{ border-radius: 6px; }
+
+/* Navigace – lepší kontrast + hezký hover */
+.topnav { overflow: hidden; background-color: #0c6f74; }      /* tmavší kvůli kontrastu */
+
+.topnav a,
+.topnav a:visited,
+.topnav a:hover,
+.topnav a:focus,
+.topnav a:active { color: #fff; }                              /* vždy bílé písmo */
+
+.topnav a{ position: relative; transition: background-color .18s ease, box-shadow .18s ease, transform .06s ease; }
+.topnav a:hover{ background-color: #095e62; box-shadow: inset 0 -3px 0 #18F0FA; }  /* zvýraznění */
+.topnav a:focus-visible{ outline: 2px solid #111; outline-offset: 2px; }
+.topnav a:active{ transform: translateY(1px); }
+
 /* Responzivita – aby se sloupce skládaly pod sebe na menších displejích */
 @media (max-width: 900px) {
   .levysloupec, .pravysloupec {

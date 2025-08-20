@@ -3,71 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zápočtový projekt – tvorba webových stránek: responzivní layout, validní HTML/CSS, cvičení Ú1–Ú5 a SVG.">
-    <title>Můj web</title>
+    
+    <title>Pohyb v kódu</title>
+    <meta name="description" content="Pohyb v kódu – student TV/IT: webové projekty (Ú1–Ú5), inspirace do výuky tělocviku a jednoduché nápady, jak zapojit technologie ve škole.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="header">
-        <h1>MŮJ WEB</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="topnav">
-        <a href="../ukol-1/ukol1.html" target="_blank">Úkol 1</a>
-        <a href="../ukol-2/index.html" target="_blank">Úkol 2</a>
-        <a href="../ukol-3/tabulka.html" target="_blank">Úkol 3</a>
-        <a href="../ukol-4/index.html" target="_blank">Úkol 4</a>
-        <a href="../ukol-5/index.html" target="_blank">Úkol 5</a>
-    </div>
-    <div class="main">
-        <div class="levysloupec">
-            <div class="card">
-                <h2>Nadpis článku</h2>
-                <p class="popisek">Popisek</p>
-                <div class="fakeimg" style="height: 200px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum impedit reiciendis nam itaque perferendis temporibus corrupti tempora dignissimos, voluptate quae repellendus quisquam officiis sequi adipisci recusandae nisi debitis fugit!</p>
-            </div>
-            <div class="card">
-                <h2>Nadpis článku</h2>
-                <p class="popisek">Popisek</p>
-                <div class="fakeimg" style="height: 200px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum impedit reiciendis nam itaque perferendis temporibus corrupti tempora dignissimos, voluptate quae repellendus quisquam officiis sequi adipisci recusandae nisi debitis fugit!</p>
-            </div>
-            <div class="card">
-                <h2>Nadpis článku</h2>
-                <p class="popisek">Popisek</p>
-                <div class="fakeimg" style="height: 200px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum impedit reiciendis nam itaque perferendis temporibus corrupti tempora dignissimos, voluptate quae repellendus quisquam officiis sequi adipisci recusandae nisi debitis fugit!</p>
-            </div>
-            <div class="card">
-                <h2>Nadpis článku</h2>
-                <p class="popisek">Popisek</p>
-                <div class="fakeimg" style="height: 200px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum impedit reiciendis nam itaque perferendis temporibus corrupti tempora dignissimos, voluptate quae repellendus quisquam officiis sequi adipisci recusandae nisi debitis fugit!</p>
-            </div>
+  <header class="header" id="top">
+    <h1>Pohyb v kódu</h1>
+    <p class="sub">Student TV/IT · webové projekty & inspirace do výuky</p>
+  </header>
+
+  <nav class="topnav">
+    <a href="#o-mne">O mně</a>
+    <a href="#projekty">Projekty</a>
+    <a href="#tv-inspirace">TV inspirace</a>
+    <a href="#kontakt">Kontakt</a>
+    <!-- cvičení – už bez diakritiky ve složkách -->
+    <a href="/ukol-1/ukol1.html"       target="_blank" rel="noopener">Úkol 1</a>
+    <a href="/ukol-2/index.html"       target="_blank" rel="noopener">Úkol 2</a>
+    <a href="/ukol-3/tabulka.html"     target="_blank" rel="noopener">Úkol 3</a>
+    <a href="/ukol-4/index.html"       target="_blank" rel="noopener">Úkol 4</a>
+    <a href="/ukol-5/index.html"       target="_blank" rel="noopener">Úkol 5</a>
+  </nav>
+
+  <div class="main">
+    <!-- levý obsah -->
+    <div class="levysloupec">
+      <section id="o-mne" class="card">
+        <h2>O mně</h2>
+        <p>Jsem student Pedagogické fakulty (obor TV/IT). Baví mě propojovat pohyb, didaktiku a technologie – od jednoduchých webů po drobné interaktivní pomůcky do hodin. Tenhle web je malý přehled mých cvičení a nápadů.</p>
+        <ul class="list-clean">
+          <li>🧩 Web: HTML/CSS základy, responzivita a přístupnost.</li>
+          <li>🏃 TV: krátká, bezpečná a srozumitelná cvičení pro žáky.</li>
+          <li>💡 Technologie: QR kódy, jednoduché online dotazníky, galerie.</li>
+        </ul>
+      </section>
+
+      <section id="projekty" class="card">
+        <h2>Projekty (výběr)</h2>
+        <div class="projects">
+          <a class="pill" href="/ukol-1/ukol1.html"   target="_blank" rel="noopener">Ú1 · Tabulka s obrázky</a>
+          <a class="pill" href="/ukol-4/index.html"   target="_blank" rel="noopener">Ú4 · Galerie</a>
+          <a class="pill" href="/ukol-5/index.html"   target="_blank" rel="noopener">Ú5 · SVG (vlajky, šipka)</a>
         </div>
-        <div class="pravysloupec">
-            <div class="card">
-                <h3>O mně</h3>
-                <div class="fakeimg" style="height: 80px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero laudantium et accusantium dolorem nobis facilis sit minima blanditiis. Consequatur veniam deserunt asperiores illum rem excepturi dolore in, ea temporibus.</p>
-            </div>
-            <div class="card">
-                <h3>Novinky a informace</h3>
-                <div class="fakeimg" style="height: 80px;">Image</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cupiditate iusto quibusdam totam, dolores, quo quos consequatur molestiae eius voluptate doloremque? Voluptatem, ex qui. Autem explicabo officiis pariatur ad laboriosam!</p>
-            </div>
-        </div>
+        <p class="note">Všech pět cvičení najdeš také v horním menu.</p>
+      </section>
+
+      <section id="tv-inspirace" class="card">
+        <h2>TV inspirace: 5 rychlých aktivit</h2>
+        <ol class="list-steps">
+          <li><strong>Hon na ocásky:</strong> žáci mají šátek za pasem; kdo přijde o ocásek, plní 10 dřepů a vrací se do hry.</li>
+          <li><strong>Obíhačka 3×3:</strong> tři stanoviště (švihadlo, hod na cíl, rovnováha); po 1 min střídání.</li>
+          <li><strong>Štafetové puzzle:</strong> běh tam–zpět pro kartičky; tým skládá obrázek/slovo.</li>
+          <li><strong>Kooperativní přenos:</strong> dvojice přenášejí míč bez rukou (např. mezi zády) po vyznačené trase.</li>
+          <li><strong>Ochutnávka mobility:</strong> 3×30 s – kočičí hřbet, dřep–držet, výpad se stočením trupu.</li>
+        </ol>
+        <p class="note">Bezpečnost především: přizpůsob prostor, počet žáků a intenzitu aktuálním podmínkám.</p>
+      </section>
+
+      <section id="technologie" class="card">
+        <h2>Technologie ve výuce</h2>
+        <ul>
+          <li>QR kódy na stanovištích (video ukázka cviku po načtení).</li>
+          <li>Krátký závěrečný dotazník (Google Forms): „Co šlo dnes nejlíp?“</li>
+          <li>Fotogalerie třídních rekordů (viz Úkol 4).</li>
+        </ul>
+      </section>
     </div>
-    <div class="footer">
-        <p>&copy; 2025 Webový ateliér Pedagogické fakulty UK</p>    
-    </div>
+
+    <!-- pravý sloupec -->
+    <aside class="pravysloupec">
+      <div class="card" id="kontakt">
+        <h3>Kontakt</h3>
+        <p>E-mail: <a href="mailto:netopyrko@example.com">netopyrko@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/Netopyrko" target="_blank" rel="noopener">Netopyrko</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Rychlé odkazy</h3>
+        <ul class="list-clean">
+          <li><a href="#o-mne">O mně</a></li>
+          <li><a href="#projekty">Projekty</a></li>
+          <li><a href="#tv-inspirace">TV inspirace</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Obrázek dne</h3>
+        <img class="fakeimg" src="/img/les.jpg" alt="Les">
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Pohyb v kódu · <a href="#top">Zpět nahoru</a></p>
+  </footer>
 </body>
 </html>
 
