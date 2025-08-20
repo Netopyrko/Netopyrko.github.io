@@ -1,0 +1,29 @@
+body{
+    padding: 10px 25px;
+    text-align: justify;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    counter-reset: kolo;
+
+}
+tr:nth-child(2n) {
+    background-color: rgb(204, 204, 255);
+
+}
+tr:nth-child(1) {
+    font-weight: bold;
+}
+tr:hover:not(:first-child) {
+    background-color: rgb(96, 96, 255);
+    color: white;
+    cursor: pointer;
+}
+tr:nth-child(1) td:nth-child(n+3)::after {
+    counter-increment: kolo;
+    content: "Kolo: " counter(kolo);
+}
+td{
+    padding: 7px;
+}

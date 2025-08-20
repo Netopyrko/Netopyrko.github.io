@@ -1,0 +1,25 @@
+:root{ --w: min(1000px, 92vw); }
+
+body{
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background:#111;
+  color:#fff;
+}
+
+.wrapper{
+  max-width: var(--w);
+  margin: 24px auto;
+  padding: 0 10px;
+}
+
+.photo{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.toolbar{ display:flex; gap:12px; justify-content:center; margin-top:12px; }
+.toolbar img{ width:40px; height:40px; display:block; }

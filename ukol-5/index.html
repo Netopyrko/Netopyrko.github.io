@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ukol5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cvičení SVG(+CSS?)</h1>
+    <div class="fake-table">
+        <!-- Domek -->
+        <div class="cell">
+          <p>Domek jedním tahem</p>
+          <svg width="100" height="100" viewBox="0 0 100 100" role="img" aria-labelledby="t-domek">
+            <title id="t-domek">Domek jedním tahem</title>
+            <polyline
+              points="
+                10,90  10,50  50,10  90,50  90,90  10,90
+                90,90  90,50  50,10  10,50  90,90  10,90
+                10,90  90,50  10,50  90,90"
+              fill="none" stroke="black" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round"
+              vector-effect="non-scaling-stroke" />
+          </svg>
+        </div>
+    
+        <!-- Vlajka ČR -->
+        <div class="cell">
+          <p>Česká vlajka</p>
+          <svg width="150" height="100" viewBox="0 0 3 2" role="img" aria-labelledby="t-cz">
+            <title id="t-cz">Vlajka České republiky</title>
+            <rect width="3" height="1" y="0" fill="white"/>
+            <rect width="3" height="1" y="1" fill="red"/>
+            <polygon points="0,0 0,2 1.2,1" fill="blue"/>
+          </svg>
+        </div>
+    
+        <!-- Vlajka Švédska -->
+        <div class="cell">
+          <p>Švédská vlajka</p>
+          <svg width="150" height="100" viewBox="0 0 16 10" role="img" aria-labelledby="t-se">
+            <title id="t-se">Vlajka Švédska</title>
+            <rect width="16" height="10" fill="#006aa7"/>
+            <rect x="5" width="2" height="10" fill="#fecc00"/>
+            <rect y="4" width="16" height="2" fill="#fecc00"/>
+          </svg>
+        </div>
+    
+        <!-- Šipka -->
+        <div class="cell">
+          <p>Šipka</p>
+            <svg class="arrow" width="100" height="100" viewBox="0 0 100 100"
+                 role="img" aria-labelledby="t-arrow" tabindex="0">
+              <title id="t-arrow">Šipka doprava</title>
+              <polygon points="20,20 70,20 70,10 90,50 70,90 70,80 20,80"
+                       stroke="black" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+</body>
+</html>
