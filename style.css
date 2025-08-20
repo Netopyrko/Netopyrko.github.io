@@ -67,6 +67,40 @@ body {
     padding: 20px;
     margin-block: 20px;
 }
+
+/* Interaktivní zvýraznění položek v top navigaci */
+.topnav a{
+  position: relative;                   /* pro pseudo-prvek ::after */
+  transition: background-color .18s ease, 
+              box-shadow .18s ease, 
+              transform .06s ease;
+  color: #fff;                          /* drž bílý text */
+}
+
+/* Hover / focus: tmavší pozadí + spodní zvýrazňovací linka */
+.topnav a:is(:hover, :focus-visible){
+  background-color: #095e62;            /* o chlup tmavší než lišta */
+  box-shadow: inset 0 -3px 0 #18F0FA;   /* tenká „světelná“ linka dole */
+}
+
+/* Jemné „podtržení“ jako animace (roztahuje se zleva doprava) */
+.topnav a::after{
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 8px;
+  height: 2px;
+  background: #18F0FA;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
+}
+.topnav a:is(:hover, :focus-visible)::after{
+  transform: scaleX(1);
+}
+
+/* Klik efekt (není nutné, ale působí „živěji“) */
+.topnav a:active{ transform: translateY(1px); }
+
 /* Clearfix hack */
 .main::after {
     content: "";
