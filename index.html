@@ -98,7 +98,10 @@
 
       <div class="card">
         <h3>Obrázek dne</h3>
-        <img class="fakeimg" src="/img/les.jpg" alt="Les">
+        <div class="photo-rotator" id="photoDay" aria-live="polite">
+          <img src="/img/les.jpg" alt="Les v ranním světle" width="640" height="360" decoding="async">
+          <p class="caption">Les</p>
+        </div>
       </div>
     </aside>
   </div>
@@ -106,6 +109,63 @@
   <footer class="footer">
     <p>&copy; 2025 Pohyb v kódu · <a href="#top">Zpět nahoru</a></p>
   </footer>
+  <script>
+  (function(){
+    const items = [
+      {src:'/img/les.jpg',     alt:'Les v ranním světle', caption:'Les'},
+      {src:'/img/boure.jpg',   alt:'Bouře a blesky',      caption:'Bouře'},
+      {src:'/img/domek.jpg',   alt:'Moderní dům',         caption:'Dům'},
+      {src:'/img/gejzir.jpg',  alt:'Gejzír',              caption:'Gejzír'},
+      {src:'/img/more.jpg',    alt:'Moře',                caption:'Moře'},
+      {src:'/img/vodopad.jpg', alt:'Vodopád',             caption:'Vodopád'}
+    ];
+
+    const box = document.getElementById('photoDay');
+    if (!box) return;
+    const img = box.querySelector('img');
+    const caption = box.querySelector('.caption');
+
+    // přednačti, ať přepnutí nebliká
+    items.forEach(it => { const im = new Image(); im.src = it.src; });
+
+    const DAY = 24 * 60 * 60 * 1000;
+
+    // index daný DNEŠNÍM DNEM (po každých 24 h se změní)
+    function dayIndex(d = new Date()){
+      // stačí lokální čas; chceš-li striktně Prahu, řekni a pošlu verzi s timeZone
+      return Math.floor(d.getTime() / DAY) % items.length;
+    }
+
+    function show(i, doFade){
+      const it = items[i];
+      if (doFade) box.classList.add('fade-out');
+      const FADE = 600; // musí sedět s CSS .6s
+      setTimeout(() => {
+        img.src = it.src;
+        img.alt = it.alt;
+        caption.textContent = it.caption;
+        if (doFade) box.classList.remove('fade-out');
+      }, doFade ? FADE : 0);
+    }
+
+    // 1) nastav hned podle dne (bez fade)
+    let i = dayIndex();
+    show(i, /*doFade*/ false);
+
+    // 2) naplánuj přepnutí NA PŮLNOC a pak každých 24 h
+    const now = new Date();
+    const nextMidnight = new Date();
+    nextMidnight.setHours(24,0,0,0);               // nejbližší půlnoc
+    setTimeout(() => {
+      i = (i + 1) % items.length;                  // další obrázek
+      show(i, true);                                // plynulý přechod
+      setInterval(() => {
+        i = (i + 1) % items.length;
+        show(i, true);
+      }, DAY);
+    }, nextMidnight - now);
+  })();
+  </script>
 </body>
 </html>
 

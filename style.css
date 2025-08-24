@@ -199,5 +199,29 @@ body {
   }
 }
 
-
+/* Obrázek dne – rotátor */
+.photo-rotator{
+  position: relative;
+  padding: 12px;
+  background: #d8d8d8;       /* tvůj šedý podklad */
+  border-radius: 10px;
+  overflow: hidden;
+}
+.photo-rotator img{
+  width: 100%;
+  aspect-ratio: 16 / 9;      /* zabrání poskoku layoutu */
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity .6s ease;
+}
+.photo-rotator.fade-out img{ opacity: 0; }
+.photo-rotator .caption{
+  position: absolute;
+  left: 16px; bottom: 16px;
+  padding: 4px 8px;
+  background: rgba(0,0,0,.55);
+  color: #fff; font-weight: 600; border-radius: 4px;
+}
 
