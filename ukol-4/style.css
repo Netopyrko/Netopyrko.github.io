@@ -1,18 +1,51 @@
-/* Celé stylování galerie „pod“ scope třídu, ať se nemíchá s globálem */
+/* Všechno pod scope, ať to nepřepisuje globál */
 .page-ukol-4 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
-  gap:12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
 }
+
+/* Karta obrázku */
 .page-ukol-4 .image-container{
-  background:#eef2f2;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 1px 2px rgba(0,0,0,.06);
+  position: relative;
+  background: #eef2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
 }
+
+/* Obrázek */
 .page-ukol-4 .image-container img{
-  width:100%; height:200px; object-fit:cover; display:block;
-  transition:transform .25s ease;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease;
 }
-.page-ukol-4 .image-container:hover img{ transform:scale(1.04); }
-.page-ukol-4 .caption{ padding:8px 10px; font-weight:600; }
+
+/* Popisek – proužek přes spodní část fotky */
+.page-ukol-4 .caption{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 10px 12px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.25;
+
+  /* Výchozí průhlednost 0.35 (zadání ~0.2–0.4) */
+  /* Druhé pozadí = černý „film“, kterému měníme šířku → efekt vyplnění */
+  background:
+    linear-gradient(90deg, rgba(0,0,0,1) 0 0) left / 0% 100% no-repeat,
+    rgba(0,0,0,.35);
+  transition: background-size .35s ease, background-color .35s ease;
+}
+
+/* Hover efekt: obrázek se nepatrně přiblíží a popisek se zcela ztmaví */
+.page-ukol-4 .image-container:hover img{
+  transform: scale(1.04);
+}
+.page-ukol-4 .image-container:hover .caption{
+  /* zcela neprůhledné pozadí */
+  background-size: 100% 100%;
+  background-color: rgba(0,0,0,1);
+}

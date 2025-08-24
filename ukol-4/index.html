@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ukol4</title>
-    <meta name="description" content="Stručný popis této stránky.">
+  <title>Úkol 4 – Galerie | Pohyb v kódu</title>
+  <meta name="description" content="Galerie se spodním popiskem, který po najetí myší ztmavne.">
 
-    <!-- zrychlení fontů (musí být NAD Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts (jako na hlavní stránce) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- stejný font jako na hlavní stránce -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+  <!-- nejdřív globální, pak lokální -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header class="header">
@@ -22,24 +22,24 @@
   </header>
 
   <main class="wrap page-ukol-4">
-        <div class="gallery">
-        <div class="image-container">
-          <img src="/img/boure.jpg" alt="Bouře" loading="lazy">
-          <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-        </div>
-        <div class="image-container">
-          <img src="/img/domek.jpg" alt="Dům" loading="lazy">
-          <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-        </div>
-        <div class="image-container">
-          <img src="/img/gejzir.jpg" alt="Gejzír" loading="lazy">
-          <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-        </div>
-        <div class="image-container">
-          <img src="/img/les.jpg" alt="Les" loading="lazy">
-          <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-        </div>
+    <div class="gallery">
+      <div class="image-container">
+        <img src="/img/boure.jpg" alt="Bouře" loading="lazy">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
       </div>
+      <div class="image-container">
+        <img src="/img/domek.jpg" alt="Dům" loading="lazy">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/gejzir.jpg" alt="Gejzír" loading="lazy">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/les.jpg" alt="Les" loading="lazy">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
